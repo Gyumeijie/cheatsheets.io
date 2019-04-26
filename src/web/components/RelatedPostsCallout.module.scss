@@ -1,0 +1,61 @@
+@import '../styles/_common.scss';
+
+.root {
+  & {
+    display: flex;
+    text-decoration: none;
+    background: $brand-a-gradient;
+    padding: 32px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 2px;
+    box-shadow: $shadow2;
+    text-shadow: 0 1px 1px change-color(black, $alpha: 0.2);
+    transition: filter 300ms linear;
+  }
+
+  &,
+  &:visited {
+    color: white;
+  }
+
+  &:hover,
+  &:focus {
+    filter: brightness(110%);
+    transition: filter 50ms linear;
+  }
+}
+
+.text {
+  margin: auto;
+  text-align: center;
+}
+
+.icon {
+  margin-bottom: 16px;
+  display: block;
+}
+
+.icon::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22512%22%20height%3D%22512%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cpath%20fill%3D%22rgb(183%2C150%2C207)%22%20d%3D%22M352%20128.4L319.7%2096%20160%20256l159.7%20160%2032.3-32.4L224.7%20256z%22%2F%3E%3C%2Fsvg%3E") center center/48px 48px no-repeat;
+  height: 48px;
+  width: 48px;
+  height: 64px;
+  width: 64px;
+  border:solid 2px #b796cf;
+  border-radius: 50%;
+  text-indent: -2px;
+  text-shadow: none;
+}
+
+.description {
+  @include font-size(1);
+  line-height: 1.4;
+  font-weight: 300;
+  display: block;
+  margin-bottom: 16px;
+}
