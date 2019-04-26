@@ -1,6 +1,7 @@
 /* @flow */
 import { graphql, Link, useStaticQuery } from 'gatsby'
 import * as React from 'react'
+import AttributePeg from './AttributePeg'
 
 /*
  * Types
@@ -34,7 +35,10 @@ export const RelatedPostItemView = ({
   <div className={`related-post-item ${className || ''}`}>
     <Link to={path}>
       <strong>{title}</strong>
-      <span>{suffix}</span>
+      <span>
+        {suffix}
+        <AttributePeg hint='New layout!' />
+      </span>
     </Link>
   </div>
 )
