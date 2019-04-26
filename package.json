@@ -101,7 +101,7 @@
   "scripts": {
     "ci": "run-s -l tsc lint prettier:check test",
     "css_modules:update": "tcm -p 'src/**/*.module.{scss,css}'; prettier --write 'src/**/*.d.ts'",
-    "build": "gatsby build && (cd public && bash ../packages/devhints-scripts/postbuild.sh)",
+    "build": "gatsby build --prefix-paths && (cd public && bash ../packages/devhints-scripts/postbuild.sh)",
     "develop": "rm -rf .cache; env DEBUG='app:*' gatsby develop --port ${PORT:-19336}",
     "fix": "devhints-validator \"sheets/*.md\" --fix",
     "tsc": "tsc",
@@ -111,7 +111,8 @@
     "prettier:fix": "prettier --write \"sheets/**/*.md\" \"{src,packages}/**/*.{js,ts,tsx,css}\" \"./*.js\"",
     "start": "yarn run develop",
     "test": "jest",
-    "validate": "devhints-validator \"sheets/*.md\""
+    "validate": "devhints-validator \"sheets/*.md\"",
+    "deploy:github": "npm run build && node ./deploy-github"
   },
   "workspaces": [
     "packages/*"

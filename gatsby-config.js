@@ -32,6 +32,7 @@ module.exports = {
     sheetPath: SHEET_PATH,
     ...siteMetadata
   },
+  pathPrefix: `/cheatsheets.io`,
   plugins: [
     {
       resolve: 'gatsby-plugin-sass',
