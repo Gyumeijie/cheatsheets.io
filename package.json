@@ -1,8 +1,8 @@
 {
   "name": "devhints-engine",
   "description": "Static site generator that builds devhints.io",
-  "version": "0.1.0",
-  "author": "Rico Sta. Cruz <rico@ricostacruz.com>",
+  "version": "1.0.0",
+  "author": "Gyumeijie <18170879819@gmail.com>",
   "bin": {
     "devhints-validator": "packages/devhints-validator/bin/devhints-validator"
   },
