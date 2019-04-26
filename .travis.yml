@@ -6,7 +6,6 @@ script:
   - yarn run lint
   - yarn run prettier:check
   - yarn run test
-  - yarn run build
   - yarn run deploy:github
 cache:
   yarn: true
