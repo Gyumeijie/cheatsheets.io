@@ -40,10 +40,13 @@
 .icon::before {
   content: '';
   display: inline-block;
-  /* TODO @include ion-ios-arrow-back(48px, adjust-color($base-a, $lightness: 16%, $hue: 20deg)); */
+  vertical-align: middle;
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22512%22%20height%3D%22512%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cpath%20fill%3D%22rgb(183%2C150%2C207)%22%20d%3D%22M352%20128.4L319.7%2096%20160%20256l159.7%20160%2032.3-32.4L224.7%20256z%22%2F%3E%3C%2Fsvg%3E") center center/48px 48px no-repeat;
+  height: 48px;
+  width: 48px;
   height: 64px;
   width: 64px;
-  border: solid 2px adjust-color($brand-a, $lightness: +16%, $hue: +20deg);
+  border:solid 2px #b796cf;
   border-radius: 50%;
   text-indent: -2px;
   text-shadow: none;
